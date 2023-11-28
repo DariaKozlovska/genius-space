@@ -1,0 +1,42 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-brand-light);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+    &__logo{
+        margin-top: 34px;
+        margin-left: 26px;
+    }
+    &__btn-close{
+        position: absolute;
+        top: 34px;
+        right: 26px;
+        background-color: transparent;
+        border: none;
+    }
+    &__menu {
+        padding: 34px 26px 0;
+    }
+    &__item {
+        color: var(--color-brand-dark);
+        margin-bottom: 16px;
+    }
+    &::after {
+        content: "";
+        background-image: url('../images/bread-circle-words.png');
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 225px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
